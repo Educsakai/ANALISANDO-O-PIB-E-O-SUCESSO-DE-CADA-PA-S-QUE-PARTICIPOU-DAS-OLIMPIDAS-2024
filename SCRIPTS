@@ -1,1 +1,39 @@
+# Projeto de Análise de Dados das Olimpíadas Usando SQL
+
+Este projeto é uma análise exploratória de dados de Olimpíadas, focando em consultas SQL para entender a relação entre medalhas, PIB, e população dos países participantes.
+
+## Estrutura dos Dados
+
+- **Tabela**: `olympics.csv`
+- **Colunas**:
+  - `country`: Nome do país
+  - `country_code`: Código do país
+  - `region`: Continente
+  - `gold`: Medalhas de ouro
+  - `silver`: Medalhas de prata
+  - `bronze`: Medalhas de bronze
+  - `total`: Total de medalhas
+  - `gdp`: Produto Interno Bruto do país
+  - `gdp_year`: Ano de referência do PIB
+  - `population`: População do país
+
+## Consultas SQL
+
+### 1. Total de Medalhas por Continente
+
+Consulta:
+```sql
+SELECT 
+    region,
+    SUM(gold) AS total_gold,
+    SUM(silver) AS total_silver,
+    SUM(bronze) AS total_bronze,
+    SUM(total) AS total_medals
+FROM 
+    `MEDALHAS.medalhas_olimpiadas`
+GROUP BY 
+    region
+ORDER BY 
+    total_medals DESC;
+
 
