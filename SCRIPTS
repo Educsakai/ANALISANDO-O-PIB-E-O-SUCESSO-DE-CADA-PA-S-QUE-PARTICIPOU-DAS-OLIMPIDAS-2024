@@ -36,4 +36,18 @@ GROUP BY
 ORDER BY 
     total_medals DESC;
 
+### Medalhas por Continente
+
+| Region         | Total Gold | Total Silver | Total Bronze | Total Medals |
+|----------------|------------|--------------|--------------|--------------|
+| Europe         | 125        | 131          | 166          | 422          |
+| Asia           | 100        | 83           | 99           | 282          |
+| North America  | 54         | 58           | 66           | 178          |
+| Oceania        | 28         | 27           | 19           | 74           |
+| Africa         | 13         | 12           | 14           | 39           |
+| South America  | 6          | 15           | 15           | 36           |
+| Caribbean      | 2          | 1            | 4            | 7            |
+
+
+
 
