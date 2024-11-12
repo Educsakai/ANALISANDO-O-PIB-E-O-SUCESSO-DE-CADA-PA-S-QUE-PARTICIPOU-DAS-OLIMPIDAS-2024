@@ -4,7 +4,7 @@ Este projeto é uma análise exploratória de dados de Olimpíadas, focando em c
 
 ## Estrutura dos Dados
 
-- **Tabela**: `olympics.csv`
+- **Tabela**: olimpiadas-441313.MEDALHAS.medalhas_olimpiadas
 - **Colunas**:
   - `country`: Nome do país
   - `country_code`: Código do país
@@ -30,7 +30,7 @@ SELECT
     SUM(bronze) AS total_bronze,
     SUM(total) AS total_medals
 FROM 
-    `MEDALHAS.medalhas_olimpiadas`
+    olimpiadas-441313.MEDALHAS.medalhas_olimpiadas
 GROUP BY 
     region
 ORDER BY 
@@ -47,6 +47,23 @@ ORDER BY
 | Africa          | 13             | 12               | 14               | 39               |
 | South America   | 6              | 15               | 15               | 36               |
 | Caribbean       | 2              | 1                | 4                | 7                |
+
+#### Top 5 países com mais medalhas de Ouro
+SELECT  
+country, gold
+from
+olimpiadas-441313.MEDALHAS.medalhas_olimpiadas
+order by
+gold desc
+limit 5
+| country       | gold |
+|---------------|------|
+| United States | 40   |
+| China         | 40   |
+| Japan         | 20   |
+| Australia     | 18   |
+| France        | 16   |
+
 
 
 
